@@ -15,6 +15,18 @@ class Parser
     private $normalizer;
     private $serializer;
     private $filePath;
+    private $validFileExtensions;
+
+    public function __construct()
+    {
+        $this->validFileExtensions = ['xml'];
+
+    }
+
+    public function isValidExtension(string $extension)
+    {
+        return in_array($extension, $this->validFileExtensions);
+    }
 
     public function fetchContent()
     {
@@ -39,10 +51,15 @@ class Parser
 
     }
 
-    public function parseContent(string $filePath)
+    public function parseContent(string $filePath, string $entityName)
     {
 
         $this->filePath = $filePath;
+        $fileType = $this->getExtension();
+
+        if (!$this->isValidExtension($fileType)) {
+            throw new \Exception('Invalid file extension');
+        }
 
         $this->encoder = [$this->getEncoder()];
         $this->normalizer = [
@@ -51,7 +68,7 @@ class Parser
         ];
         $this->serializer = new Serializer($this->normalizer, $this->encoder);
 
-        return $this->serializer->deserialize($this->fetchContent(), 'App\Entity\Catalog', $this->getExtension());
+        return $this->serializer->deserialize($this->fetchContent(), $entityName, $fileType);
 
     }
 
