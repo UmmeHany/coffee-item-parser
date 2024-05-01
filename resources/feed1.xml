@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <item>
+        <entity_id>4012</entity_id>
+        <CategoryName><![CDATA[New York Coffee Beans]]></CategoryName>
+        <sku>NYCPumpkinPie1LBBean</sku>
+        <name><![CDATA[New York Coffee Pumpkin Pie Flavored Coffee Beans 1lb Bag]]></name>
+        <description></description>
+        <shortdesc><![CDATA[New York Coffee Pumpkin Pie Flavored Coffee Beans 1lb Bag makes many pots of pumpkin pie flavored coffee from this New York Coffee whole bean coffee.
+]]>        </shortdesc>
+        <price>13.9900</price>
+        <link>http://www.coffeeforless.com/new-york-coffee-pumpkin-pie-flavored-coffee-beans-1lb-bag.html</link>
+        <image>http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/product/NYC_Coffee_Bag_whitebg.png</image>
+        <Brand><![CDATA[New York Coffee]]></Brand>
+        <Rating>0</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count>1</Count>
+        <Flavored>Yes</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>4013</entity_id>
+        <CategoryName><![CDATA[New York Coffee Beans]]></CategoryName>
+        <sku>NYCSugarCookie1LBBean</sku>
+        <name><![CDATA[New York Coffee Sugar Cookie Flavored Coffee Beans 1lb Bag]]></name>
+        <description></description>
+        <shortdesc><![CDATA[New York Coffee Sugar Cookie Flavored Coffee Beans 1lb Bag makes many pots of sugar cookie flavored coffee from this New York Coffee whole bean coffee.
+]]>        </shortdesc>
+        <price>13.9900</price>
+        <link>http://www.coffeeforless.com/new-york-coffee-sugar-cookie-flavored-coffee-beans-1lb-bag.html</link>
+        <image>http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/product/NYC_Coffee_Bag_whitebg.png</image>
+        <Brand><![CDATA[New York Coffee]]></Brand>
+        <Rating>0</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count>1</Count>
+        <Flavored>Yes</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>4014</entity_id>
+        <CategoryName><![CDATA[New York Coffee Beans]]></CategoryName>
+        <sku>NYCMexicanChoc1LBBean</sku>
+        <name><![CDATA[New York Coffee Mexican Chocolate Flavored Coffee Beans 1lb Bag]]></name>
+        <description></description>
+        <shortdesc><![CDATA[New York Coffee Mexican Chocolate Flavored Coffee Beans 1lb Bag makes many pots of mexican chocolate flavored coffee from this New York Coffee whole bean coffee.
+]]>        </shortdesc>
+        <price>13.9900</price>
+        <link>http://www.coffeeforless.com/new-york-coffee-mexican-chocolate-flavored-coffee-beans-1lb-bag.html</link>
+        <image>http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/product/NYC_Coffee_Bag_whitebg.png</image>
+        <Brand><![CDATA[New York Coffee]]></Brand>
+        <Rating>0</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count>1</Count>
+        <Flavored>Yes</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+</catalog>
+

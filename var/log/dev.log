@@ -1,0 +1,3 @@
+[2024-05-01T19:40:51.473501+02:00] app.ERROR: An exception occurred while executing a query: SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: items.id [] []
+[2024-05-01T19:40:51.475203+02:00] app.ERROR: An exception occurred while executing a query: SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: items.id [] []
+[2024-05-01T19:40:51.476320+02:00] app.ERROR: An exception occurred while executing a query: SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: items.id [] []
