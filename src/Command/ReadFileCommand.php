@@ -31,7 +31,6 @@ class ReadFileCommand extends Command
         $this->parser = $parser;
         $this->repository = $repository;
         $this->logger = $logger;
-
     }
 
     protected function configure(): void
@@ -59,40 +58,28 @@ class ReadFileCommand extends Command
 
             foreach ($catalog->getItem() as $item) {
 
-                try {
+                $this->repository->create(
+                    $item['entity_id'],
+                    $item['name'],
+                    $item['sku'],
+                    $item['description'],
+                    $item['shortdesc'],
+                    $item['CategoryName'],
+                    $item['Brand'],
+                    $item['link'],
+                    $item['image'],
+                    $item['CaffeineType'],
+                    $item['price'] ?: 0,
+                    $item['Rating'] ?: 0,
+                    $item['Facebook'],
+                    $item['Count'] ?: 0,
+                    Parser::convertToBooleanValue((string) $item['Flavored'] ?: ''),
+                    Parser::convertToBooleanValue((string) $item['Seasonal'] ?: ''),
+                    Parser::convertToBooleanValue((string) $item['Instock'] ?: ''),
+                    Parser::convertToBooleanValue((string) $item['IsKCup'] ?: '')
+                );
 
-                    $this->repository->create(
-                        $item['entity_id'],
-                        $item['name'],
-                        $item['sku'],
-                        $item['description'],
-                        $item['shortdesc'],
-                        $item['CategoryName'],
-                        $item['Brand'],
-                        $item['link'],
-                        $item['image'],
-                        $item['CaffeineType'],
-                        $item['price'] ?: 0,
-                        $item['Rating'] ?: 0,
-                        $item['Facebook'],
-                        $item['Count'] ?: 0,
-                        Parser::convertToBooleanValue((string) $item['Flavored'] ?: ''),
-                        Parser::convertToBooleanValue((string) $item['Seasonal'] ?: ''),
-                        Parser::convertToBooleanValue((string) $item['Instock'] ?: ''),
-                        Parser::convertToBooleanValue((string) $item['IsKCup'] ?: '')
-                    );
-
-                    $io->note('Item is inserted. Item id: ' . $item['entity_id']);
-
-                } catch (\Exception $e) {
-
-                    $this->logger->error($e->getMessage());
-                    $io->error($e->getMessage());
-
-                    return Command::FAILURE;
-
-                }
-
+                $io->note('Item is inserted. Item id: ' . $item['entity_id']);
             }
 
         } catch (\Exception $e) {
@@ -101,7 +88,6 @@ class ReadFileCommand extends Command
             $io->error($e->getMessage());
 
             return Command::FAILURE;
-
         }
 
         $io->success('Data is saved');

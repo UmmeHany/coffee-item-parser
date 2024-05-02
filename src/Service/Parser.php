@@ -20,7 +20,6 @@ class Parser
     public function __construct()
     {
         $this->validFileExtensions = ['xml'];
-
     }
 
     public function isValidExtension(string $extension)
@@ -28,27 +27,24 @@ class Parser
         return in_array($extension, $this->validFileExtensions);
     }
 
-    public function fetchContent()
+    public function fetchContent(): string
     {
         return file_get_contents($this->filePath);
-
     }
 
-    public function getExtension()
+    public function getExtension(): string
     {
         return pathinfo($this->filePath)['extension'];
-
     }
 
     public function getEncoder()
     {
-
         switch ($this->getExtension()) {
             case 'xml':
                 return new XmlEncoder();
+                // more cases can be introduced (json)
 
         }
-
     }
 
     public function parseContent(string $filePath, string $entityName)
@@ -69,13 +65,12 @@ class Parser
         $this->serializer = new Serializer($this->normalizer, $this->encoder);
 
         return $this->serializer->deserialize($this->fetchContent(), $entityName, $fileType);
-
     }
 
     public static function convertToBooleanValue(string $description)
     {
 
         return !(strtolower($description) === 'no' || $description === "0");
-
     }
+
 }
