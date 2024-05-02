@@ -23,7 +23,7 @@ class ReadFileCommandTest extends KernelTestCase
         $commandTester->assertCommandIsSuccessful();
 
         $output = $commandTester->getDisplay();
-        $this->assertStringContainsString('Data is saved', $output);
+        $this->assertStringContainsString('Data is imported', $output);
 
     }
 
