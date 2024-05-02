@@ -35,7 +35,7 @@ class ReadFileCommand extends Command
 
     protected function configure(): void
     {
-        $this ->addArgument('file_path', InputArgument::REQUIRED, 'Enter valid file path') ;
+        $this->addArgument('file_path', InputArgument::REQUIRED, 'Enter valid file path');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -49,7 +49,7 @@ class ReadFileCommand extends Command
             return Command::FAILURE;
         }
 
-        $io->note('welcome to parser');
+        $io->note('Importing data ....');
 
         try {
 
@@ -79,7 +79,6 @@ class ReadFileCommand extends Command
                     Parser::convertToBooleanValue((string) $item['IsKCup'] ?: '')
                 );
 
-                $io->note('Item is inserted. Item id: ' . $item['entity_id']);
             }
 
         } catch (\Exception $e) {
@@ -90,7 +89,7 @@ class ReadFileCommand extends Command
             return Command::FAILURE;
         }
 
-        $io->success('Data is saved');
+        $io->success('Data is imported');
         return Command::SUCCESS;
 
     }

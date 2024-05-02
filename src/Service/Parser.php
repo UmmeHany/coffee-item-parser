@@ -22,7 +22,7 @@ class Parser
         $this->validFileExtensions = ['xml'];
     }
 
-    public function isValidExtension(string $extension)
+    public function isValidExtension(string $extension): bool
     {
         return in_array($extension, $this->validFileExtensions);
     }
@@ -67,10 +67,10 @@ class Parser
         return $this->serializer->deserialize($this->fetchContent(), $entityName, $fileType);
     }
 
-    public static function convertToBooleanValue(string $description)
+    public static function convertToBooleanValue(string $description): bool
     {
 
-        return !(strtolower($description) === 'no' || $description === "0");
+        return (strtolower($description) === 'yes' || $description === "1");
     }
 
 }
